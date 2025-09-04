@@ -67,7 +67,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\231893ReyesAbout.aspx" />
+    <Content Include="Pages\231893ReyesCart.aspx" />
+    <Content Include="Pages\231893ReyesCheckout.aspx" />
     <Content Include="Pages\231893ReyesLandingPage.aspx" />
+    <Content Include="Pages\231893ReyesLogin.aspx" />
+    <Content Include="Pages\231893ReyesOrderTracking.aspx" />
+    <Content Include="Pages\231893ReyesProfile.aspx" />
+    <Content Include="Pages\231893ReyesSearchProducts.aspx" />
+    <Content Include="Pages\231893ReyesSignUp.aspx" />
+    <Content Include="Pages\231893ReyesViewProduct.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -78,12 +87,75 @@
     <Compile Include="MasterPage\231893ReyesMaster.Master.designer.cs">
       <DependentUpon>231893ReyesMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\231893ReyesAbout.aspx.cs">
+      <DependentUpon>231893ReyesAbout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\231893ReyesAbout.aspx.designer.cs">
+      <DependentUpon>231893ReyesAbout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\231893ReyesCart.aspx.cs">
+      <DependentUpon>231893ReyesCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\231893ReyesCart.aspx.designer.cs">
+      <DependentUpon>231893ReyesCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\231893ReyesCheckout.aspx.cs">
+      <DependentUpon>231893ReyesCheckout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\231893ReyesCheckout.aspx.designer.cs">
+      <DependentUpon>231893ReyesCheckout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\231893ReyesLandingPage.aspx.cs">
       <DependentUpon>231893ReyesLandingPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\231893ReyesLandingPage.aspx.designer.cs">
       <DependentUpon>231893ReyesLandingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\231893ReyesLogin.aspx.cs">
+      <DependentUpon>231893ReyesLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\231893ReyesLogin.aspx.designer.cs">
+      <DependentUpon>231893ReyesLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\231893ReyesOrderTracking.aspx.cs">
+      <DependentUpon>231893ReyesOrderTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\231893ReyesOrderTracking.aspx.designer.cs">
+      <DependentUpon>231893ReyesOrderTracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\231893ReyesProfile.aspx.cs">
+      <DependentUpon>231893ReyesProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\231893ReyesProfile.aspx.designer.cs">
+      <DependentUpon>231893ReyesProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\231893ReyesSearchProducts.aspx.cs">
+      <DependentUpon>231893ReyesSearchProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\231893ReyesSearchProducts.aspx.designer.cs">
+      <DependentUpon>231893ReyesSearchProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\231893ReyesSignUp.aspx.cs">
+      <DependentUpon>231893ReyesSignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\231893ReyesSignUp.aspx.designer.cs">
+      <DependentUpon>231893ReyesSignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\231893ReyesViewProduct.aspx.cs">
+      <DependentUpon>231893ReyesViewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\231893ReyesViewProduct.aspx.designer.cs">
+      <DependentUpon>231893ReyesViewProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -98,8 +170,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\css\" />
-    <Folder Include="Assets\img\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Styles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
