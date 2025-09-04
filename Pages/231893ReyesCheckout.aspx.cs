@@ -70,9 +70,9 @@ namespace PCPartsShop.Pages
             decimal tax = subtotal * taxRate;
             decimal total = subtotal + tax;
 
-            lblCheckoutSubtotal.Text = $"${subtotal:F2}";
-            lblCheckoutTax.Text = $"${tax:F2}";
-            lblCheckoutTotal.Text = $"${total:F2}";
+            lblCheckoutSubtotal.Text = $"₱{subtotal:F2}";
+        
+            lblCheckoutTotal.Text = $"₱{total:F2}";
         }
 
         protected void btnPlaceOrder_Click(object sender, EventArgs e)
@@ -203,13 +203,13 @@ namespace PCPartsShop.Pages
 
         private string GetShippingAddress()
         {
-            return $"{txtAddress.Text.Trim()}, {txtCity.Text.Trim()}, {ddlState.SelectedValue} {txtZipCode.Text.Trim()}";
+            return $"{txtAddress.Text.Trim()}, {txtCity.Text.Trim()},{txtZipCode.Text.Trim()}";
         }
 
         private void ShowOrderSuccess(string orderNumber, decimal total)
         {
             lblOrderNumber.Text = orderNumber;
-            lblOrderTotal.Text = $"${total:F2}";
+            lblOrderTotal.Text = $"₱{total:F2}";
             
             pnlCheckoutForm.Visible = false;
             pnlOrderSuccess.Visible = true;
@@ -228,7 +228,7 @@ namespace PCPartsShop.Pages
         protected void btnTrackOrder_Click(object sender, EventArgs e)
         {
             string orderNumber = lblOrderNumber.Text;
-            Response.Redirect($"231893ReyesOrderTracking.aspx?orderNumber={orderNumber}");
+            Response.Redirect($"231893ReyesOrderTracking.aspx");
         }
 
         private void ShowErrorMessage(string message)

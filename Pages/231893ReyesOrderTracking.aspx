@@ -10,12 +10,6 @@
                 <h2 class="display-6 fw-bold">
                     <i class="bi bi-truck me-2"></i>Order Tracking
                 </h2>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="231893ReyesLandingPage.aspx">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Order Tracking</li>
-                    </ol>
-                </nav>
             </div>
         </div>
 
@@ -83,7 +77,7 @@
                                             </span>
                                         </div>
                                         <div class="col-md-2">
-                                            <strong>Total: $<%# Eval("Total", "{0:F2}") %></strong>
+                                            <strong>Total: ₱<%# Eval("Total", "{0:F2}") %></strong>
                                         </div>
                                         <div class="col-md-3">
                                             <small class="text-muted"><%# Eval("CustomerName") %></small><br>
@@ -131,20 +125,17 @@
                                                 <div class="card-body">
                                                     <div class="d-flex justify-content-between mb-2">
                                                         <span>Subtotal:</span>
-                                                        <span>$<%# Eval("Subtotal", "{0:F2}") %></span>
+                                                        <span>₱<%# Eval("Subtotal", "{0:F2}") %></span>
                                                     </div>
                                                     <div class="d-flex justify-content-between mb-2">
                                                         <span>Shipping:</span>
                                                         <span class="text-success">Free</span>
                                                     </div>
-                                                    <div class="d-flex justify-content-between mb-2">
-                                                        <span>Tax:</span>
-                                                        <span>$<%# Eval("Tax", "{0:F2}") %></span>
-                                                    </div>
+                                               
                                                     <hr>
                                                     <div class="d-flex justify-content-between">
                                                         <strong>Total:</strong>
-                                                        <strong class="text-primary">$<%# Eval("Total", "{0:F2}") %></strong>
+                                                        <strong class="text-primary">₱<%# Eval("Total", "{0:F2}") %></strong>
                                                     </div>
                                                 </div>
                                             </div>

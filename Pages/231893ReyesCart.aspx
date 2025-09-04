@@ -52,7 +52,7 @@
                                             <small class="text-muted"><%# Eval("Category") %></small>
                                         </div>
                                         <div class="col-md-2">
-                                            <span class="fw-bold">$<%# Eval("Price", "{0:F2}") %></span>
+                                            <span class="fw-bold">₱<%# Eval("Price", "{0:F2}") %></span>
                                         </div>
                                         <div class="col-md-2">
                                             <div class="d-flex align-items-center">
@@ -70,7 +70,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-1">
-                                            <span class="fw-bold text-primary">$<%# Eval("TotalPrice", "{0:F2}") %></span>
+                                            <span class="fw-bold text-primary">₱<%# Eval("TotalPrice", "{0:F2}") %></span>
                                         </div>
                                         <div class="col-md-1">
                                             <asp:Button ID="btnRemove" runat="server"
@@ -95,18 +95,7 @@
                         <h5 class="mb-0">Order Summary</h5>
                     </div>
                     <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Subtotal:</span>
-                            <asp:Label ID="lblSubtotal" runat="server" CssClass="fw-bold"></asp:Label>
-                        </div>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Shipping:</span>
-                            <asp:Label ID="lblShipping" runat="server" Text="Free" CssClass="text-success"></asp:Label>
-                        </div>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Tax:</span>
-                            <asp:Label ID="lblTax" runat="server" CssClass="fw-bold"></asp:Label>
-                        </div>
+        
                         <hr>
                         <div class="d-flex justify-content-between mb-3">
                             <span class="h5">Total:</span>

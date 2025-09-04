@@ -103,6 +103,11 @@ namespace PCPartsShop.MasterPage
             Response.Redirect("~/Pages/231893ReyesAbout.aspx");
         }
 
+        protected void btnOrderTracking_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Pages/231893ReyesOrderTracking.aspx");
+        }
+
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             // Clear session data

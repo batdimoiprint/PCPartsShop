@@ -59,7 +59,7 @@
                             <!-- Product Price -->
                             <div class="mb-3">
                                 <h3 class="text-primary fw-bold mb-2">
-                                    $<asp:Label ID="lblProductPrice" runat="server"></asp:Label>
+                                    ₱<asp:Label ID="lblProductPrice" runat="server"></asp:Label>
                                 </h3>
                                 <div class="d-flex gap-2">
                                     <asp:Label ID="lblTag1" runat="server" CssClass="badge bg-outline-primary"></asp:Label>
@@ -128,7 +128,7 @@
                                             Eval("Description") %>
                                     </p>
                                     <div class="mb-2">
-                                        <span class="h6 text-primary fw-bold">$<%# Eval("Price", "{0:F2}") %></span>
+                                        <span class="h6 text-primary fw-bold">₱<%# Eval("Price", "{0:F2}") %></span>
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <asp:Button ID="btnViewProduct" runat="server" 

@@ -54,6 +54,12 @@
 
                         <!-- Right-aligned items -->
                         <div class="d-flex align-items-center gap-2">
+                            <!-- Order Tracking Button -->
+                            <asp:Button ID="btnOrderTracking" runat="server" CssClass="btn btn-outline-secondary" 
+                                       OnClick="btnOrderTracking_Click" Text="Track Orders">
+                              
+                            </asp:Button>
+
                             <!-- Shopping Cart Button -->
                             <div class="position-relative">
                                 <asp:Button ID="btnCart" runat="server" CssClass="btn btn-outline-primary"

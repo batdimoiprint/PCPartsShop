@@ -42,9 +42,8 @@ namespace PCPartsShop.Pages
             
             if (cart == null || cart.Count == 0)
             {
-                lblSubtotal.Text = "$0.00";
-                lblTax.Text = "$0.00";
-                lblTotal.Text = "$0.00";
+     
+                lblTotal.Text = "₱0.00";
                 return;
             }
 
@@ -53,9 +52,8 @@ namespace PCPartsShop.Pages
             decimal tax = subtotal * taxRate;
             decimal total = subtotal + tax;
 
-            lblSubtotal.Text = $"${subtotal:F2}";
-            lblTax.Text = $"${tax:F2}";
-            lblTotal.Text = $"${total:F2}";
+         
+            lblTotal.Text = $"₱{total:F2}";
 
             // Update cart count in session
             Session["CartItemCount"] = cart.Sum(c => c.Quantity);

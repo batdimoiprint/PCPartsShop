@@ -49,16 +49,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-center gap-3">
-                                <asp:Button ID="btnContinueShopping2" runat="server" 
-                                           CssClass="btn btn-primary btn-lg" 
-                                           Text="Continue Shopping" 
-                                           OnClick="btnContinueShopping_Click" />
-                                <asp:Button ID="btnTrackOrder" runat="server" 
-                                           CssClass="btn btn-outline-primary btn-lg" 
-                                           Text="Track Order" 
-                                           OnClick="btnTrackOrder_Click" />
-                            </div>
+                   
                         </div>
                     </div>
                 </div>
@@ -108,17 +99,7 @@
                                     <asp:TextBox ID="txtCity" runat="server" CssClass="form-control" 
                                                placeholder="Enter city"></asp:TextBox>
                                 </div>
-                                <div class="col-md-3 mb-3">
-                                    <label for="ddlState" class="form-label fw-semibold">State</label>
-                                    <asp:DropDownList ID="ddlState" runat="server" CssClass="form-select">
-                                        <asp:ListItem Value="">Select State</asp:ListItem>
-                                        <asp:ListItem Value="CA">California</asp:ListItem>
-                                        <asp:ListItem Value="NY">New York</asp:ListItem>
-                                        <asp:ListItem Value="TX">Texas</asp:ListItem>
-                                        <asp:ListItem Value="FL">Florida</asp:ListItem>
-                                        <asp:ListItem Value="WA">Washington</asp:ListItem>
-                                    </asp:DropDownList>
-                                </div>
+              
                                 <div class="col-md-3 mb-3">
                                     <label for="txtZipCode" class="form-label fw-semibold">ZIP Code</label>
                                     <asp:TextBox ID="txtZipCode" runat="server" CssClass="form-control" 
@@ -180,7 +161,7 @@
                                             <small class="text-muted">Qty: <%# Eval("Quantity") %></small>
                                         </div>
                                         <div class="text-end">
-                                            <span class="fw-bold">$<%# Eval("TotalPrice", "{0:F2}") %></span>
+                                            <span class="fw-bold">₱<%# Eval("TotalPrice", "{0:F2}") %></span>
                                         </div>
                                     </div>
                                 </ItemTemplate>
@@ -196,10 +177,7 @@
                                     <span>Shipping:</span>
                                     <span class="text-success">Free</span>
                                 </div>
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>Tax:</span>
-                                    <asp:Label ID="lblCheckoutTax" runat="server" CssClass="fw-bold"></asp:Label>
-                                </div>
+                 
                                 <hr>
                                 <div class="d-flex justify-content-between mb-3">
                                     <span class="h5">Total:</span>

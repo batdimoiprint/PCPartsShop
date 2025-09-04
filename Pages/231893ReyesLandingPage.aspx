@@ -44,7 +44,7 @@
                                         <%# Eval("Description") %>
                                     </p>
                                     <div class="mb-3">
-                                        <h4 class="text-primary fw-bold mb-0">$<%# Eval("Price", "{0:F2}") %></h4>
+                                        <h4 class="text-primary fw-bold mb-0">₱<%# Eval("Price", "{0:F2}") %></h4>
                                         <small class="text-muted"><%# Eval("Category") %></small>
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center">
