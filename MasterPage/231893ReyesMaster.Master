@@ -18,14 +18,15 @@
     <form id="form1" runat="server">
 
         <div class="px-75">
-    <div class="navbar bg-base-100 shadow-sm">
+    <div class="navbar bg-base-100 shadow-sm flex content-between">
   <div class="flex-1">
-    <a class="btn btn-ghost text-xl">PCPartsShop</a>
+      <asp:Button class="btn btn-ghost text-xl" ID="Home" runat="server" Text="PCPartsShop" OnClick="Home_Click" />
+    
   </div>
   <div class="flex gap-2">
-    <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+    <input type="text" placeholder="Search" class="input input-bordered w-128" />
       <button class="btn btn-active btn-primary">Search</button>
-    <div class="dropdown dropdown-end">
+    <div class="dropdown dropdown-end"> 
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
           <img
@@ -42,7 +43,6 @@
             <span class="badge">New</span>
           </a>
         </li>
-        <li><a>Settings</a></li>
         <li><a>Logout</a></li>
       </ul>
     </div>

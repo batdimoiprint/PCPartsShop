@@ -13,5 +13,12 @@ namespace PCPartsShop.MasterPage
         {
 
         }
+
+        protected void Home_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("231893ReyesLandingPage.aspx");
+        }
+
+
     }
-}
+}   
