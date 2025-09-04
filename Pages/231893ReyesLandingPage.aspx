@@ -2,37 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
-    <!-- Hero Section -->
-    <div class="py-5">
-        <div class="position-relative overflow-hidden rounded-3 shadow-lg" style="min-height: 500px; background-image: url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp'); background-size: cover; background-position: center;">
-            <!-- Hero Overlay -->
-            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
-            
-            <!-- Hero Content -->
-            <div class="position-relative d-flex align-items-center justify-content-center h-100 text-white text-center p-5" style="min-height: 500px;">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6">
-                            <h1 class="display-4 fw-bold mb-4">Looking for an upgrade?</h1>
-                            <p class="lead mb-4">
-                                Choose from our most powerful but affordable computer parts for your needs.
-                            </p>
-                            <asp:Button ID="btnBrowseParts" runat="server" CssClass="btn btn-primary btn-lg px-4 py-2" 
-                                       Text="🔍 Browse Parts" OnClick="btnBrowseParts_Click" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Products Section -->
-    <div class="py-4">
+    <div>
         <div class="container-fluid">
             <div class="row mb-4">
                 <div class="col-12 text-center">
-                    <h2 class="display-5 fw-bold">Featured Products</h2>
+                    <h2 class="display-5 fw-bold">Welcome to PC Parts Shop</h2>
                     <p class="lead text-muted">Discover our latest computer parts and components</p>
                 </div>
             </div>
@@ -81,11 +58,11 @@
                                                            CommandName="ViewProduct" 
                                                            CommandArgument='<%# Eval("ProductId") %>'
                                                            OnCommand="lnkProduct_Command">
-                                                👁️ View
+                                                View
                                             </asp:LinkButton>
                                             <asp:Button ID="btnAddToCart" runat="server" 
                                                        CssClass="btn btn-primary btn-sm"
-                                                       Text="🛒 Add"
+                                                       Text="Add"
                                                        CommandName="AddToCart"
                                                        CommandArgument='<%# Eval("ProductId") %>' />
                                         </div>
@@ -98,13 +75,5 @@
             </div>
         </div>
     </div>
-
-    <!-- Success Message -->
-    <asp:Label ID="lblMessage" runat="server" CssClass="alert alert-success alert-dismissible fade show" 
-               Visible="false" role="alert">
-        <i class="bi bi-check-circle-fill me-2"></i>
-        <span id="messageText" runat="server"></span>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </asp:Label>
 
 </asp:Content>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using PCPartsShop.MasterPage;
 
 namespace PCPartsShop.Pages
 {
@@ -35,7 +36,7 @@ namespace PCPartsShop.Pages
                     Description = "High-performance graphics card perfect for gaming and professional workloads with excellent price-to-performance ratio.",
                     Price = 899.99m,
                     Category = "Graphics Cards",
-                    ImageUrl = "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+                    ImageUrl = "https://dlcdnwebimgs.asus.com/gain/c0ba3131-118a-4ab8-8898-f744c4bdfd56/w692",
                     Badge = "NEW",
                     BadgeColor = "success",
                     Tag1 = "Gaming",
@@ -48,7 +49,7 @@ namespace PCPartsShop.Pages
                     Description = "Latest generation processor with multiple cores and high clock speeds for superior computing performance.",
                     Price = 449.99m,
                     Category = "Processors",
-                    ImageUrl = "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+                    ImageUrl = "https://m.media-amazon.com/images/I/41BmX5xpFrL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
                     Badge = "HOT",
                     BadgeColor = "warning",
                     Tag1 = "Performance",
@@ -61,7 +62,7 @@ namespace PCPartsShop.Pages
                     Description = "High-speed DDR5 memory modules for improved system responsiveness and multitasking capabilities.",
                     Price = 299.99m,
                     Category = "Memory",
-                    ImageUrl = "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+                    ImageUrl = "https://res.cloudinary.com/rsc/image/upload/b_rgb:FFFFFF,c_pad,dpr_2.625,f_auto,h_214,q_auto,w_380/c_pad,h_214,w_380/Y2662086-01?pgw=1",
                     Badge = "FAST",
                     BadgeColor = "info",
                     Tag1 = "DDR5",
@@ -74,7 +75,7 @@ namespace PCPartsShop.Pages
                     Description = "Ultra-fast solid state drives with large capacity and excellent reliability for all your storage needs.",
                     Price = 199.99m,
                     Category = "Storage",
-                    ImageUrl = "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+                    ImageUrl = "https://shop.villman.com/cdn/shop/files/MZ-V9P2T0B-AM_004_L-Perspective_Black-Gallery-1600x1200_800x.webp?v=1686924461",
                     Badge = "SALE",
                     BadgeColor = "primary",
                     Tag1 = "NVMe",
@@ -87,7 +88,7 @@ namespace PCPartsShop.Pages
                     Description = "Premium motherboards with advanced features, multiple expansion slots, and excellent build quality.",
                     Price = 349.99m,
                     Category = "Motherboards",
-                    ImageUrl = "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+                    ImageUrl = "https://easypc.com.ph/cdn/shop/files/AsusROGSTRIXZ890-AGAMINGWIFILGA1851UltraProcessorDDR5Motherboard_2_2048x.png?v=1732600544",
                     Badge = "POPULAR",
                     BadgeColor = "secondary",
                     Tag1 = "ROG",
@@ -100,7 +101,7 @@ namespace PCPartsShop.Pages
                     Description = "Efficient and reliable power supplies with modular cables and 80+ certification for energy savings.",
                     Price = 149.99m,
                     Category = "Power Supplies",
-                    ImageUrl = "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+                    ImageUrl = "https://www.jumbo-computer.com/cdn/shop/files/1024_d0a9e63e-b5a9-4067-9109-56e1ddb9e3d7_800x.png?v=1711020805",
                     Badge = "ECO",
                     BadgeColor = "success",
                     Tag1 = "80+ Gold",
@@ -153,31 +154,26 @@ namespace PCPartsShop.Pages
                     });
                 }
 
-                // Update cart count in session
-                Session["CartItemCount"] = cart.Sum(c => c.Quantity);
+                // Update cart count in session and get new total
+                int newCartCount = cart.Sum(c => c.Quantity);
+                Session["CartItemCount"] = newCartCount;
 
-                // Show success message
-                ShowSuccessMessage($"{product.Name} added to cart!");
+                // Get master page and call the new method
+                var masterPage = this.Master as _231893ReyesMaster;
+                if (masterPage != null)
+                {
+                    masterPage.UpdateCartCountAndShowMessage(product.Name, newCartCount);
+                }
             }
             catch (Exception ex)
             {
-                // Handle error
-                ShowErrorMessage("Error adding product to cart. Please try again.");
+                // Handle error - show error message in header
+                var masterPage = this.Master as _231893ReyesMaster;
+                if (masterPage != null)
+                {
+                    masterPage.ShowSuccessMessage("Error adding product to cart. Please try again.");
+                }
             }
-        }
-
-        private void ShowSuccessMessage(string message)
-        {
-            lblMessage.Visible = true;
-            lblMessage.CssClass = "alert alert-success alert-dismissible fade show";
-            messageText.InnerText = message;
-        }
-
-        private void ShowErrorMessage(string message)
-        {
-            lblMessage.Visible = true;
-            lblMessage.CssClass = "alert alert-danger alert-dismissible fade show";
-            messageText.InnerText = message;
         }
 
         protected void lnkProduct_Command(object sender, CommandEventArgs e)

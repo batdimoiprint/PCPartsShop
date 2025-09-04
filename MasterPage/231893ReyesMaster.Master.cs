@@ -14,6 +14,7 @@ namespace PCPartsShop.MasterPage
             if (!IsPostBack)
             {
                 CheckUserSession();
+                UpdateCartCount();
             }
         }
 
@@ -46,6 +47,42 @@ namespace PCPartsShop.MasterPage
             }
         }
 
+        public void UpdateCartCount()
+        {
+            int cartCount = 0;
+            if (Session["CartItemCount"] != null)
+            {
+                cartCount = (int)Session["CartItemCount"];
+            }
+            else
+            {
+                // Calculate from cart items if CartItemCount is not set
+                var cart = Session["ShoppingCart"] as List<CartItem>;
+                if (cart != null)
+                {
+                    cartCount = cart.Sum(c => c.Quantity);
+                    Session["CartItemCount"] = cartCount;
+                }
+            }
+            
+            lblCartCount.Text = cartCount.ToString();
+        }
+
+        public void ShowSuccessMessage(string message)
+        {
+            string script = $"showHeaderMessage('{HttpUtility.JavaScriptStringEncode(message)}');";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "ShowMessage", script, true);
+        }
+
+        public void UpdateCartCountAndShowMessage(string productName, int newCount)
+        {
+            lblCartCount.Text = newCount.ToString();
+            Session["CartItemCount"] = newCount;
+            
+            string script = $"addToCartSuccess('{HttpUtility.JavaScriptStringEncode(productName)}', {newCount});";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "AddToCartSuccess", script, true);
+        }
+
         protected void Home_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Pages/231893ReyesLandingPage.aspx");
@@ -61,12 +98,19 @@ namespace PCPartsShop.MasterPage
             Response.Redirect("~/Pages/231893ReyesCart.aspx");
         }
 
+        protected void btnAbout_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Pages/231893ReyesAbout.aspx");
+        }
+
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             // Clear session data
             Session["IsLoggedIn"] = false;
             Session["UserName"] = null;
             Session["UserEmail"] = null;
+            Session["ShoppingCart"] = null;
+            Session["CartItemCount"] = 0;
             Session.Clear();
             Session.Abandon();
             
@@ -91,5 +135,18 @@ namespace PCPartsShop.MasterPage
                 Response.Redirect("~/Pages/231893ReyesSearchProducts.aspx");
             }
         }
+    }
+
+    // Cart item class (if not already defined elsewhere)
+    [Serializable]
+    public class CartItem
+    {
+        public string ProductId { get; set; }
+        public string ProductName { get; set; }
+        public decimal Price { get; set; }
+        public string ImageUrl { get; set; }
+        public string Category { get; set; }
+        public int Quantity { get; set; }
+        public decimal TotalPrice => Price * Quantity;
     }
 }

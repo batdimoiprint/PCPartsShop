@@ -38,22 +38,7 @@
                                      Visible="false" role="alert"></asp:Label>
                         </div>
 
-                        <!-- Remember Me & Forgot Password -->
-                        <div class="row mb-4">
-                            <div class="col-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="rememberMe">
-                                    <label class="form-check-label" for="rememberMe">
-                                        Remember me
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-6 text-end">
-                                <a href="#" class="text-decoration-none small">
-                                    <i class="bi bi-question-circle me-1"></i>Forgot password?
-                                </a>
-                            </div>
-                        </div>
+                
 
                         <!-- Login Button -->
                         <div class="d-grid mb-3">

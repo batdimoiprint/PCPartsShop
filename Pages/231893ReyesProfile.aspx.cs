@@ -37,7 +37,7 @@ namespace PCPartsShop.Pages
                 {
                     // Display registered user information
                     DisplayUserInfo(currentUser);
-                    pnlRegisteredInfo.Visible = true;
+                    
                     pnlDemoInfo.Visible = false;
                 }
                 else
@@ -45,7 +45,7 @@ namespace PCPartsShop.Pages
                     // Display demo user information
                     DisplayDemoUserInfo();
                     pnlDemoInfo.Visible = true;
-                    pnlRegisteredInfo.Visible = false;
+                    
                 }
             }
             catch (Exception ex)
@@ -74,8 +74,7 @@ namespace PCPartsShop.Pages
             lblFirstName.Text = user.FirstName;
             lblLastName.Text = user.LastName;
             lblEmail.Text = user.Email;
-            lblPhone.Text = !string.IsNullOrEmpty(user.Phone) ? user.Phone : "Not provided";
-            lblRole.Text = user.Role;
+            lblPhone.Text = !string.IsNullOrEmpty(user.Phone) ? user.Phone : "Not provided";           
             lblRegistrationDate.Text = user.RegistrationDate.ToString("MMM dd, yyyy");
             lblFullName.Text = user.FullName;
             lblAccountType.Text = $"{user.Role} Account";
@@ -92,7 +91,6 @@ namespace PCPartsShop.Pages
             lblLastName.Text = "User";
             lblEmail.Text = userEmail;
             lblPhone.Text = "Not provided";
-            lblRole.Text = userRole;
             lblRegistrationDate.Text = DateTime.Now.ToString("MMM dd, yyyy");
             lblFullName.Text = $"{userName} User";
             lblAccountType.Text = $"{userRole} Account";
