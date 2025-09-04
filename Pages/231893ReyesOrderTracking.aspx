@@ -108,9 +108,9 @@
                                                             <h6 class="mb-1"><%# Eval("ProductName") %></h6>
                                                             <small class="text-muted"><%# Eval("Category") %></small>
                                                             <div class="mt-1">
-                                                                <span class="fw-bold">$<%# Eval("Price", "{0:F2}") %></span>
+                                                                <span class="fw-bold">₱<%# Eval("Price", "{0:F2}") %></span>
                                                                 <span class="text-muted"> × <%# Eval("Quantity") %></span>
-                                                                <span class="text-primary fw-bold ms-2">= $<%# Eval("TotalPrice", "{0:F2}") %></span>
+                                                                <span class="text-primary fw-bold ms-2">= ₱<%# Eval("TotalPrice", "{0:F2}") %></span>
                                                             </div>
                                                         </div>
                                                     </div>
