@@ -3,138 +3,108 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-
-    <!-- Product Cards Section -->
-    <div class="py-4">
-        <div class="container-fluid">
-            <div class="row g-4">
-                <!-- Product Card 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" 
-                             class="card-img-top" alt="Graphics Card" style="height: 250px; object-fit: cover;">
-                        <div class="card-body d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title mb-0">Graphics Card</h5>
-                                <span class="badge bg-success">NEW</span>
-                            </div>
-                            <p class="card-text flex-grow-1">
-                                High-performance graphics card perfect for gaming and professional workloads with excellent price-to-performance ratio.
+    <!-- Hero Section -->
+    <div class="py-5">
+        <div class="position-relative overflow-hidden rounded-3 shadow-lg" style="min-height: 500px; background-image: url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp'); background-size: cover; background-position: center;">
+            <!-- Hero Overlay -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+            
+            <!-- Hero Content -->
+            <div class="position-relative d-flex align-items-center justify-content-center h-100 text-white text-center p-5" style="min-height: 500px;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 col-lg-6">
+                            <h1 class="display-4 fw-bold mb-4">Looking for an upgrade?</h1>
+                            <p class="lead mb-4">
+                                Choose from our most powerful but affordable computer parts for your needs.
                             </p>
-                            <div class="d-flex justify-content-end gap-2 mt-auto">
-                                <span class="badge bg-outline-primary">Gaming</span>
-                                <span class="badge bg-outline-secondary">Hardware</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" 
-                             class="card-img-top" alt="Processor" style="height: 250px; object-fit: cover;">
-                        <div class="card-body d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title mb-0">CPU Processor</h5>
-                                <span class="badge bg-warning text-dark">HOT</span>
-                            </div>
-                            <p class="card-text flex-grow-1">
-                                Latest generation processor with multiple cores and high clock speeds for superior computing performance.
-                            </p>
-                            <div class="d-flex justify-content-end gap-2 mt-auto">
-                                <span class="badge bg-outline-info">Performance</span>
-                                <span class="badge bg-outline-secondary">Hardware</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" 
-                             class="card-img-top" alt="Memory RAM" style="height: 250px; object-fit: cover;">
-                        <div class="card-body d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title mb-0">Memory RAM</h5>
-                                <span class="badge bg-info">FAST</span>
-                            </div>
-                            <p class="card-text flex-grow-1">
-                                High-speed DDR4/DDR5 memory modules for improved system responsiveness and multitasking capabilities.
-                            </p>
-                            <div class="d-flex justify-content-end gap-2 mt-auto">
-                                <span class="badge bg-outline-success">Speed</span>
-                                <span class="badge bg-outline-secondary">Hardware</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 4 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" 
-                             class="card-img-top" alt="Storage SSD" style="height: 250px; object-fit: cover;">
-                        <div class="card-body d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title mb-0">SSD Storage</h5>
-                                <span class="badge bg-primary">SALE</span>
-                            </div>
-                            <p class="card-text flex-grow-1">
-                                Ultra-fast solid state drives with large capacity and excellent reliability for all your storage needs.
-                            </p>
-                            <div class="d-flex justify-content-end gap-2 mt-auto">
-                                <span class="badge bg-outline-warning">Storage</span>
-                                <span class="badge bg-outline-secondary">Hardware</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 5 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" 
-                             class="card-img-top" alt="Motherboard" style="height: 250px; object-fit: cover;">
-                        <div class="card-body d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title mb-0">Motherboard</h5>
-                                <span class="badge bg-secondary">POPULAR</span>
-                            </div>
-                            <p class="card-text flex-grow-1">
-                                Premium motherboards with advanced features, multiple expansion slots, and excellent build quality.
-                            </p>
-                            <div class="d-flex justify-content-end gap-2 mt-auto">
-                                <span class="badge bg-outline-danger">Premium</span>
-                                <span class="badge bg-outline-secondary">Hardware</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 6 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" 
-                             class="card-img-top" alt="Power Supply" style="height: 250px; object-fit: cover;">
-                        <div class="card-body d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title mb-0">Power Supply</h5>
-                                <span class="badge bg-success">ECO</span>
-                            </div>
-                            <p class="card-text flex-grow-1">
-                                Efficient and reliable power supplies with modular cables and 80+ certification for energy savings.
-                            </p>
-                            <div class="d-flex justify-content-end gap-2 mt-auto">
-                                <span class="badge bg-outline-success">Efficient</span>
-                                <span class="badge bg-outline-secondary">Hardware</span>
-                            </div>
+                            <asp:Button ID="btnBrowseParts" runat="server" CssClass="btn btn-primary btn-lg px-4 py-2" 
+                                       Text="🔍 Browse Parts" OnClick="btnBrowseParts_Click" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Products Section -->
+    <div class="py-4">
+        <div class="container-fluid">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold">Featured Products</h2>
+                    <p class="lead text-muted">Discover our latest computer parts and components</p>
+                </div>
+            </div>
+            
+            <!-- Dynamic Product Cards -->
+            <div class="row g-4">
+                <asp:Repeater ID="rptProducts" runat="server" OnItemCommand="rptProducts_ItemCommand">
+                    <ItemTemplate>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <asp:LinkButton ID="lnkProductImage" runat="server" 
+                                               CommandName="ViewProduct" 
+                                               CommandArgument='<%# Eval("ProductId") %>'
+                                               OnCommand="lnkProduct_Command"
+                                               CssClass="text-decoration-none">
+                                    <img src='<%# Eval("ImageUrl") %>' 
+                                         class="card-img-top" alt='<%# Eval("Name") %>' 
+                                         style="height: 250px; object-fit: cover;">
+                                </asp:LinkButton>
+                                <div class="card-body d-flex flex-column">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <asp:LinkButton ID="lnkProductName" runat="server" 
+                                                       CommandName="ViewProduct" 
+                                                       CommandArgument='<%# Eval("ProductId") %>'
+                                                       OnCommand="lnkProduct_Command"
+                                                       CssClass="text-decoration-none text-dark">
+                                            <h5 class="card-title mb-0"><%# Eval("Name") %></h5>
+                                        </asp:LinkButton>
+                                        <span class="badge bg-<%# Eval("BadgeColor") %>"><%# Eval("Badge") %></span>
+                                    </div>
+                                    <p class="card-text flex-grow-1">
+                                        <%# Eval("Description") %>
+                                    </p>
+                                    <div class="mb-3">
+                                        <h4 class="text-primary fw-bold mb-0">$<%# Eval("Price", "{0:F2}") %></h4>
+                                        <small class="text-muted"><%# Eval("Category") %></small>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex gap-1">
+                                            <span class="badge bg-outline-primary"><%# Eval("Tag1") %></span>
+                                            <span class="badge bg-outline-secondary"><%# Eval("Tag2") %></span>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <asp:LinkButton ID="lnkViewProduct" runat="server" 
+                                                           CssClass="btn btn-outline-primary btn-sm"
+                                                           CommandName="ViewProduct" 
+                                                           CommandArgument='<%# Eval("ProductId") %>'
+                                                           OnCommand="lnkProduct_Command">
+                                                👁️ View
+                                            </asp:LinkButton>
+                                            <asp:Button ID="btnAddToCart" runat="server" 
+                                                       CssClass="btn btn-primary btn-sm"
+                                                       Text="🛒 Add"
+                                                       CommandName="AddToCart"
+                                                       CommandArgument='<%# Eval("ProductId") %>' />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <asp:Label ID="lblMessage" runat="server" CssClass="alert alert-success alert-dismissible fade show" 
+               Visible="false" role="alert">
+        <i class="bi bi-check-circle-fill me-2"></i>
+        <span id="messageText" runat="server"></span>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </asp:Label>
 
 </asp:Content>

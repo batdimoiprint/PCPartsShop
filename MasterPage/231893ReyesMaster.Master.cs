@@ -56,6 +56,11 @@ namespace PCPartsShop.MasterPage
             Response.Redirect("~/Pages/231893ReyesLogin.aspx");
         }
 
+        protected void btnCart_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Pages/231893ReyesCart.aspx");
+        }
+
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             // Clear session data
@@ -67,6 +72,24 @@ namespace PCPartsShop.MasterPage
             
             // Redirect to landing page
             Response.Redirect("~/Pages/231893ReyesLandingPage.aspx");
+        }
+
+        protected void btnProfile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Pages/231893ReyesProfile.aspx");
+        }
+
+        protected void btnSearchMaster_Click(object sender, EventArgs e)
+        {
+            string searchQuery = txtSearchMaster.Text.Trim();
+            if (!string.IsNullOrEmpty(searchQuery))
+            {
+                Response.Redirect($"~/Pages/231893ReyesSearchProducts.aspx?q={Server.UrlEncode(searchQuery)}");
+            }
+            else
+            {
+                Response.Redirect("~/Pages/231893ReyesSearchProducts.aspx");
+            }
         }
     }
 }

@@ -36,10 +36,23 @@
                         <div class="ms-auto d-flex align-items-center gap-2">
                             <!-- Search Input -->
                             <div class="input-group" style="width: 300px;">
-                                <input type="text" class="form-control" placeholder="Search products..." aria-label="Search">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="bi bi-search"></i>
-                                </button>
+                                <asp:TextBox ID="txtSearchMaster" runat="server" CssClass="form-control" 
+                                           placeholder="Search products..." aria-label="Search"></asp:TextBox>
+                                <asp:Button ID="btnSearchMaster" runat="server" CssClass="btn btn-primary" 
+                                           OnClick="btnSearchMaster_Click">
+                                    
+                                </asp:Button>
+                            </div>
+                            
+                            <!-- Shopping Cart Button -->
+                            <div class="position-relative">
+                                <asp:Button ID="btnCart" runat="server" CssClass="btn btn-outline-primary" 
+                                           Text="&#xf216;" OnClick="btnCart_Click" 
+                                           style="font-family: 'bootstrap-icons';" />
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    3
+                                    <span class="visually-hidden">items in cart</span>
+                                </span>
                             </div>
                             
                             <!-- User Profile Dropdown - Only visible when logged in -->
@@ -51,10 +64,10 @@
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                     <li>
-                                        <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                        <asp:LinkButton ID="btnProfile" runat="server" CssClass="dropdown-item d-flex justify-content-between align-items-center" OnClick="btnProfile_Click">
                                             <span><i class="bi bi-person me-2"></i><asp:Label ID="lblUserName" runat="server" Text="Profile"></asp:Label></span>
                                             <span class="badge bg-primary rounded-pill">New</span>
-                                        </a>
+                                        </asp:LinkButton>
                                     </li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li>
@@ -84,35 +97,6 @@
             <!-- Footer -->
             <footer class="bg-light text-center py-4 mt-5 rounded border">
                 <div class="container">
-                    <!-- Footer Links -->
-                    <nav class="mb-3">
-                        <div class="row justify-content-center">
-                            <div class="col-auto">
-                                <a href="#" class="text-decoration-none text-muted me-4">About us</a>
-                                <a href="#" class="text-decoration-none text-muted me-4">Contact</a>
-                                <a href="#" class="text-decoration-none text-muted me-4">Jobs</a>
-                                <a href="#" class="text-decoration-none text-muted">Press kit</a>
-                            </div>
-                        </div>
-                    </nav>
-                    
-                    <!-- Social Media Icons -->
-                    <nav class="mb-3">
-                        <div class="row justify-content-center">
-                            <div class="col-auto">
-                                <a href="#" class="text-muted me-3" title="Twitter">
-                                    <i class="bi bi-twitter" style="font-size: 1.5rem;"></i>
-                                </a>
-                                <a href="#" class="text-muted me-3" title="YouTube">
-                                    <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
-                                </a>
-                                <a href="#" class="text-muted" title="Facebook">
-                                    <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </nav>
-                    
                     <!-- Copyright -->
                     <div class="row justify-content-center">
                         <div class="col-auto">
@@ -132,3 +116,4 @@
             crossorigin="anonymous"></script>
 </body>
 </html>
+
